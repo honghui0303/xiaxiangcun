@@ -1,0 +1,433 @@
+{
+  "version": 1,
+  "config": {
+    "meditate_qi_per_sec": 1,
+    "offline_eff": 0.35,
+    "offline_cap_hours": 8,
+    "handling_overhead": 0.95,
+    "start_items": {
+      "lingcao": 3,
+      "jingshui": 2
+    },
+    "start_stones": 0,
+    "plot_capacity": 3,
+    "recipe_pick_rule": "top_tier_hold",
+    "plant_plan": [
+      [
+        "lingcao"
+      ],
+      [
+        "lingcao",
+        "lingcao"
+      ],
+      [
+        "lingcao",
+        "lingcao",
+        "xueshen"
+      ],
+      [
+        "lingcao",
+        "lingcao",
+        "xueshen"
+      ],
+      [
+        "lingcao",
+        "lingcao",
+        "xueshen"
+      ],
+      [
+        "lingcao",
+        "lingcao",
+        "xueshen"
+      ],
+      [
+        "lingcao",
+        "lingcao",
+        "xueshen"
+      ],
+      [
+        "lingcao",
+        "lingcao",
+        "xueshen"
+      ],
+      [
+        "lingcao",
+        "lingcao",
+        "xueshen"
+      ]
+    ]
+  },
+  "crops": [
+    {
+      "id": "lingcao",
+      "name": "灵草",
+      "grow_sec": 90,
+      "yield": 3,
+      "source": "plot",
+      "tier": 1,
+      "desc": "院里最常见的灵植。一茬九十个呼吸，收割三次就够一炉回灵丹。整条丹道的底子，永远不嫌多。"
+    },
+    {
+      "id": "zhuye",
+      "name": "竹叶",
+      "grow_sec": 45,
+      "yield": 3,
+      "source": "ambient",
+      "ambient_rate_sec": 15,
+      "ambient_cap": 60,
+      "gather_sec": 5,
+      "gather_yield": 2,
+      "tier": 1,
+      "desc": "院东竹丛，掐了又长。压丹火用，取之不尽。"
+    },
+    {
+      "id": "jingshui",
+      "name": "井水",
+      "grow_sec": 60,
+      "yield": 4,
+      "source": "ambient",
+      "ambient_rate_sec": 15,
+      "ambient_cap": 60,
+      "gather_sec": 4,
+      "gather_yield": 2,
+      "tier": 1,
+      "desc": "老井的水，打一桶要六十个呼吸。丹方里最不起眼、也最不能缺的一味。"
+    },
+    {
+      "id": "xueshen",
+      "name": "血参",
+      "grow_sec": 240,
+      "yield": 2,
+      "source": "plot",
+      "tier": 3,
+      "desc": "三年成株，一茬四分钟才收两根。元婴之后的丹方全靠它吊着，第三块田种上它，小院就不再只是种菜了。"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "huiling_dan",
+      "name": "回灵丹",
+      "inputs": {
+        "lingcao": 2
+      },
+      "qi": 30,
+      "sec": 20,
+      "stones": 3,
+      "unlock_realm": 0,
+      "tier": 1,
+      "desc": "最粗浅的丹。两株灵草，一炉二十个呼吸。它存在的意义是让新来的小院在九十秒内就有第一件成品。"
+    },
+    {
+      "id": "peiyuan_dan",
+      "name": "培元丹",
+      "inputs": {
+        "lingcao": 3,
+        "jingshui": 1
+      },
+      "qi": 70,
+      "sec": 20,
+      "stones": 7,
+      "unlock_realm": 1,
+      "tier": 2,
+      "desc": "加了井水，药性稳。第二块田开出来才养得起这个消耗。"
+    },
+    {
+      "id": "guyuan_dan",
+      "name": "固元丹",
+      "inputs": {
+        "lingcao": 4,
+        "zhuye": 2
+      },
+      "qi": 150,
+      "sec": 22,
+      "stones": 15,
+      "unlock_realm": 2,
+      "tier": 3,
+      "desc": "竹叶压火，成丹时有一层薄薄的白霜。金丹期的口粮。"
+    },
+    {
+      "id": "xuanshen_dan",
+      "name": "玄参丹",
+      "inputs": {
+        "lingcao": 8,
+        "xueshen": 1
+      },
+      "qi": 520,
+      "sec": 60,
+      "stones": 52,
+      "unlock_realm": 3,
+      "tier": 4,
+      "desc": "第一次用到血参。一炉要烧六十个呼吸，炉子是这时候开始真正忙起来的。"
+    },
+    {
+      "id": "ningjin_dan",
+      "name": "凝金丹",
+      "inputs": {
+        "lingcao": 16,
+        "xueshen": 2,
+        "jingshui": 2
+      },
+      "qi": 1600,
+      "sec": 90,
+      "stones": 160,
+      "unlock_realm": 4,
+      "tier": 5,
+      "desc": "十六株灵草只为凝一颗。开炉时院子里会有金光，是小人抬头看的那种亮。"
+    },
+    {
+      "id": "jiuzhuan_dan",
+      "name": "九转丹",
+      "inputs": {
+        "lingcao": 24,
+        "xueshen": 3,
+        "zhuye": 4
+      },
+      "qi": 4200,
+      "sec": 120,
+      "stones": 420,
+      "unlock_realm": 5,
+      "tier": 6,
+      "desc": "九转九歇，炉火不灭两个时辰。这味丹开始不像人间的药。"
+    },
+    {
+      "id": "taiyi_dan",
+      "name": "太一丹",
+      "inputs": {
+        "lingcao": 32,
+        "xueshen": 4,
+        "jingshui": 6
+      },
+      "qi": 12000,
+      "sec": 180,
+      "stones": 1200,
+      "unlock_realm": 6,
+      "tier": 7,
+      "desc": "三十二株灵草、四根血参。小院一年的收成，换一炉。"
+    },
+    {
+      "id": "zijin_dan",
+      "name": "紫金丹",
+      "inputs": {
+        "lingcao": 40,
+        "xueshen": 5,
+        "zhuye": 8,
+        "jingshui": 8
+      },
+      "qi": 36000,
+      "sec": 300,
+      "stones": 3600,
+      "unlock_realm": 7,
+      "tier": 8,
+      "desc": "丹成时紫气从炉口溢出来，会把半个院子照成暮色。渡劫期唯一的口粮，也是飞升前最后一炉。"
+    }
+  ],
+  "realms": [
+    {
+      "name": "练气",
+      "exp": 0,
+      "plots": 1,
+      "unlock_recipes": [
+        "huiling_dan"
+      ],
+      "desc": "刚搬进小院。一块田，一株草，蒲团还硬。"
+    },
+    {
+      "name": "筑基",
+      "exp": 220,
+      "plots": 2,
+      "unlock_recipes": [
+        "peiyuan_dan"
+      ],
+      "desc": "开垦第二块田。地基稳了，才谈得上种得更多。"
+    },
+    {
+      "name": "金丹",
+      "exp": 900,
+      "plots": 3,
+      "unlock_recipes": [
+        "guyuan_dan"
+      ],
+      "desc": "第三块田改种血参。小院从这一刻起不只是种菜了。"
+    },
+    {
+      "name": "元婴",
+      "exp": 3000,
+      "plots": 3,
+      "unlock_recipes": [
+        "xuanshen_dan"
+      ],
+      "desc": "第一次开炉六十七个呼吸。你开始舍不得离开屏幕。"
+    },
+    {
+      "name": "化神",
+      "exp": 11500,
+      "plots": 3,
+      "unlock_recipes": [
+        "ningjin_dan"
+      ],
+      "desc": "凝金丹开炉有光。院子还是那个院子，光不一样了。"
+    },
+    {
+      "name": "炼虚",
+      "exp": 45500,
+      "plots": 3,
+      "unlock_recipes": [
+        "jiuzhuan_dan"
+      ],
+      "desc": "炉火可以连烧两个时辰。小人守着炉，不困。"
+    },
+    {
+      "name": "大乘",
+      "exp": 182000,
+      "plots": 3,
+      "unlock_recipes": [
+        "taiyi_dan"
+      ],
+      "desc": "一年的收成只够一炉。你开始习惯慢。"
+    },
+    {
+      "name": "渡劫",
+      "exp": 766000,
+      "plots": 3,
+      "unlock_recipes": [
+        "zijin_dan"
+      ],
+      "desc": "紫气溢出炉口，把半个院子照成暮色。天要来了。"
+    },
+    {
+      "name": "仙人",
+      "exp": 3270000,
+      "plots": 3,
+      "unlock_recipes": [],
+      "post_symbol": "仙缘",
+      "desc": "飞升之后，小院日常还在。灵草照种，丹照炼，井边的竹又高了半尺。"
+    }
+  ],
+  "upgrades": [
+    {
+      "id": "danfang_1",
+      "name": "参悟丹方·一",
+      "cost_stones": 1500,
+      "effect": "recipe_qi_mult",
+      "value": 0.08,
+      "desc": "把回灵丹的方子重新读一遍，同样的料出更多的药。"
+    },
+    {
+      "id": "danfang_2",
+      "name": "参悟丹方·二",
+      "cost_stones": 3000,
+      "effect": "recipe_qi_mult",
+      "value": 0.08,
+      "desc": "丹方上有些字，看了十年才认得。"
+    },
+    {
+      "id": "danfang_3",
+      "name": "参悟丹方·三",
+      "cost_stones": 6000,
+      "effect": "recipe_qi_mult",
+      "value": 0.08,
+      "desc": "火候差一分，药性差一成。"
+    },
+    {
+      "id": "danfang_4",
+      "name": "参悟丹方·四",
+      "cost_stones": 12000,
+      "effect": "recipe_qi_mult",
+      "value": 0.08,
+      "desc": "开始能自己改方子了。"
+    },
+    {
+      "id": "danfang_5",
+      "name": "参悟丹方·五",
+      "cost_stones": 24000,
+      "effect": "recipe_qi_mult",
+      "value": 0.08,
+      "desc": "炉子没变，药变了。"
+    },
+    {
+      "id": "danfang_6",
+      "name": "参悟丹方·六",
+      "cost_stones": 48000,
+      "effect": "recipe_qi_mult",
+      "value": 0.08,
+      "desc": "再看旧方子，处处是错。"
+    },
+    {
+      "id": "zhuangshi_shideng",
+      "name": "院景·石灯",
+      "cost_stones": 8000,
+      "effect": "cosmetic",
+      "value": 0,
+      "desc": "两盏石灯，夜里院门口亮一点。不涨修为。"
+    },
+    {
+      "id": "zhuangshi_zhuli",
+      "name": "院景·竹篱",
+      "cost_stones": 30000,
+      "effect": "cosmetic",
+      "value": 0,
+      "desc": "把菜畦围起来。不涨修为。"
+    },
+    {
+      "id": "zhuangshi_xiaochi",
+      "name": "院景·小池",
+      "cost_stones": 100000,
+      "effect": "cosmetic",
+      "value": 0,
+      "desc": "井边挖个池子养莲。不涨修为，但小院有了水声。"
+    },
+    {
+      "id": "dongfu_kuojian",
+      "name": "洞府扩建",
+      "cost_stones": 200000,
+      "effect": "unlock_post_content",
+      "value": 0,
+      "desc": "飞升之后的事。灵石转仙缘以后，这是唯一还值得攒的东西。"
+    },
+    {
+      "id": "zhuangshi_taoguan",
+      "name": "院景·陶罐",
+      "cost_stones": 150,
+      "effect": "cosmetic",
+      "value": 0,
+      "unlock_realm": 0,
+      "desc": "井边多两只陶罐，口朝下扣着。一只缺了口。"
+    },
+    {
+      "id": "zhuangshi_jingtai",
+      "name": "院景·井台石",
+      "cost_stones": 260,
+      "effect": "cosmetic",
+      "value": 0,
+      "unlock_realm": 1,
+      "desc": "井口四周围一圈青石。湿的时候颜色更深。"
+    },
+    {
+      "id": "zhuangshi_limen",
+      "name": "院景·竹篱门",
+      "cost_stones": 320,
+      "effect": "cosmetic",
+      "value": 0,
+      "unlock_realm": 2,
+      "desc": "篱笆上开出一道矮门。门轴是歪的，关不严。"
+    },
+    {
+      "id": "zhuangshi_ludian",
+      "name": "院景·丹炉垫石",
+      "cost_stones": 400,
+      "effect": "cosmetic",
+      "value": 0,
+      "unlock_realm": 3,
+      "desc": "炉脚垫三块石头。炉身正了一点，火也稳一点——只是看起来稳。"
+    },
+    {
+      "id": "zhuangshi_mudun",
+      "name": "院景·铁砧木墩",
+      "cost_stones": 480,
+      "effect": "cosmetic",
+      "value": 0,
+      "unlock_realm": 3,
+      "desc": "铁砧旁多一个木墩，上面插着两把旧锤。锤柄早就松了。"
+    }
+  ]
+}

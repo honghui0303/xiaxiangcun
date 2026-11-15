@@ -1,0 +1,28 @@
+# ---------------- Godot 4 ----------------
+# 导入缓存与引擎生成的中间文件，不进版本库
+.godot/
+.import/
+*.translation
+export.cfg
+export_presets.cfg
+
+# ---------------- 开发产物 ----------------
+# 引擎自截图（main.gd 的 --capture）与探针日志
+_render.png
+*.log
+
+# Python
+__pycache__/
+*.pyc
+
+# 参考图：别人游戏的截图，且带本机任务栏，不入公开仓库（文件保留在本地）
+docs/preview.png
+
+# ---------------- 内部笔记 ----------------
+# 这道工序的工作记录，不对外
+.workbuddy/
+
+# ---------------- 系统 ----------------
+.DS_Store
+Thumbs.db
+desktop.ini

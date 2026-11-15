@@ -1,0 +1,17 @@
+# 默认按文本处理并统一 LF；二进制文件显式标注，避免 diff 当成文本
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.bmp binary
+*.ico binary
+
+# Windows 批处理必须是 CRLF，否则 cmd 某些情况下会吃掉行尾
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+*.gd text
+*.tscn text
+*.tres text
+*.godot text
+*.json text
