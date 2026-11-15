@@ -67,11 +67,11 @@ run.bat
 
 ```mermaid
 flowchart LR
-    subgraph 规则层["规则层（不画东西）"]
+    subgraph rules["规则层：只算，不画"]
         SIM["sim.gd<br/>数值唯一权威<br/>+ 存档 / 离线补算"]
         BOOK["logbook.gd<br/>什么时候该出一句话"]
     end
-    subgraph 表现层["表现层（不决定数值）"]
+    subgraph view["表现层：只演，不定数值"]
         BOARD["task_board.gd<br/>把意图翻成一个任务"]
         PAWN["pawn.gd<br/>走过去 · 演动作"]
         YARD["yard.gd<br/>小院色块绘制"]
@@ -101,7 +101,7 @@ flowchart LR
 ## 目录
 
 ```
-scripts/          游戏代码（9 个文件，约 2700 行）
+scripts/          游戏代码（9 个文件，约 3000 行）
   sim.gd          数值层：境界 / 丹方 / 田块 / 采集 / 离线 / 存档      ← 唯一的数值权威
   logbook.gd      日志引擎：天数类 / 循环类 / 事件类三种触发
   yard.gd         小院绘制（全部 _draw() 色块，无外部图片）
